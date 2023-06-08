@@ -8,12 +8,6 @@ const Home = () => {
         firstName:"",
         lastName:"",
         email:""
-        // country:""
-        // state:"",
-        // city:"",
-        // gender:"",
-        // dob:"",
-        // age:''
     });
     const [selectedCountry,setSelectedCountry] = useState('');
     const [selectedState,setSelectedState] = useState('');
@@ -27,12 +21,10 @@ const Home = () => {
         async function fetchData() {
             const getData =await fetch("http://localhost:4100/api/getCountryName");
             const countryName = await getData.json();
-            console.log("country name !!!!",countryName);
             setCountry(countryName.response);
         }
         fetchData();
     },[]);
-    // console.log("USER AGE",calculateAge(userDetails.dob))
     const submitHandler = () => {
         const userData = {
             firstName:userDetails.firstName,
@@ -45,7 +37,6 @@ const Home = () => {
             dob:dob,
             age:age
         }
-        console.log("SEND DATA!!",userData);
         if(userDetails.firstName.length ==0 || !userDetails.firstName.match("^[a-zA-Z]*$")) {
             alert(`!Invalid firstName!, Please fill firstName`);
         }
@@ -80,122 +71,22 @@ const Home = () => {
             }).then(result => {
                 alert("Hello");
                 alert(result.data.message);
-                // setUserDetails({
-                //     firstName:"",
-                //     lastName:"",
-                //     email:"",
-                // })
             }).catch(error => {
                 console.log(error);
             });
         }
 
     }
-
-
-
-        // if(!userDetails.firstName.length === undefined ||
-        //     !userDetails.lastName.length === undefined ||
-        //     !userDetails.email.length === undefined
-        //     ) {
-        //     if(((userDetails.firstName).length == 0 || (userDetails.lastName).length == 0 ||
-        //         (userDetails.email).length == 0) || !radioBtn || userDetails.age <= 14 ||
-        //     !userDetails.firstName.match("^[a-zA-Z]*$") || !userDetails.lastName.match("^[a-zA-Z]*$")
-        //     || !userDetails.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) ) {
-        //         alert("Invalid firstName or lastName, Please Check firstName or lastName  input field");
-        //         return;
-        //     }
-
-        // }
-
-
-
-        // if(((userDetails.firstName).length == 0 || (userDetails.lastName).length == 0 ||
-        //         (userDetails.email).length == 0) || !radioBtn || userDetails.age <= 14 ||
-        //     !userDetails.firstName.match("^[a-zA-Z]*$") || !userDetails.lastName.match("^[a-zA-Z]*$")
-        //     || !userDetails.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) ) {
-        //         alert("Invalid firstName or lastName, Please Check firstName or lastName  input field");
-        //         return;
-        // }
-
-        // if(!radioBtn || userDetails.age <= 14 ||
-        //     !userDetails.firstName.match("^[a-zA-Z]*$") || !userDetails.lastName.match("^[a-zA-Z]*$")
-        //     || !userDetails.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) ) {
-        //         alert("Invalid firstName or lastName, Please Check firstName or lastName  input field");
-        //         return;
-        // }
-        // else if(userDetails.firstName.match("^[a-zA-Z]*$")) {
-        //     alert("Please Write Alphabet value ")
-        //     return;
-        // }
-
-
-    //     else {
-    //         console.log("ELSE PART!!!!");
-    //         const userData = {
-    //             firstName:userDetails.firstName,
-    //             lastName:userDetails.lastName,
-    //             email:userDetails.email,
-    //             age:userDetails.age
-    //         }
-    
-    //         axios({
-    //             method:"POST",
-    //             url:"http://localhost:4100/api/saveData",
-    //             headers:{"Content-Type":'application/json'},
-    //             data:userData
-    //         }).then(result => {
-    //             alert(result.data.message);
-    //             setUserDetails({
-    //                 firstName:"",
-    //                 lastName:"",
-    //                 email:"",
-    //             })
-    //         }).catch(error => {
-    //             console.log(error);
-    //         });
-
-    //     }
-
-
-    // }
     const changeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         setUserDetails({...userDetails,[name]:value});
-        // if(name === "dob") {
-        //     console.log("VALUE!!!!",value);
-
-        // }
-
     }
-    console.log("USERDETAILS",userDetails);
-    // const selectHandler = (val) => {
-    //     console.log("SELECT VALUE",val);
-
-    // }
-
-
-
-
     const dobChangeHandler = (event) => {
         const userAge = Math.floor((new Date() - new Date(event).getTime()) / 3.15576e+10);
         setDob(event);
         setAge(userAge);
     }
-
-
-
-    // console.log("DOB!!!!",userDetails.dob);
-    // console.log("AGE type!!",typeof(userDetails.age));
-    // console.log("dob type",typeof(userDetails.dob))
-    // console.log("AGE!!!",calculateAge(userDetails.dob));
-    // console.log("FirstName!!!!!",userDetails.firstName.match("^[a-zA-Z]*$"))
-
-    console.log("Selected Country!!!",selectedCountry);
-    console.log("Radio Button",radioBtn);
-
-
     return(
         <>
             <div className="header">
