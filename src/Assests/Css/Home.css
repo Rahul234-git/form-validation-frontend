@@ -1,0 +1,182 @@
+.header {
+    background-color: tomato;
+    width: 100%;
+    padding: 15px;
+    
+}
+.header-title {
+    color: darkslateblue;
+    text-align: center;
+}
+.form-cont {
+    position: absolute;
+    left: 409px;
+    height: 900px;
+    width: 506px;
+    top: 108px;
+    border-radius: 18px;
+    background-color: palegoldenrod;
+}
+.first-name-cont {
+    position: absolute;
+    left: 59px;
+    top: 34px;
+
+}
+.first-name-label {
+
+}
+.first-name-input {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+
+}
+.last-name-cont {
+    position: absolute;
+    left: 59px;
+    top: 114px;
+
+}
+.last-name-label {
+
+}
+.last-name-input {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.email-cont {
+    position: absolute;
+    left: 59px;
+    top: 198px;
+
+}
+.email-label {
+
+}
+.email-input {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+
+}
+.country-dropdown-cont {
+    position: absolute;
+    left: 59px;
+    top: 279px;
+    
+}
+.country-label {
+    
+}
+.country-select-option {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+}
+.state-dropdown-cont {
+    position: absolute;
+    left: 59px;
+    top: 350px;
+
+}
+.state-label {
+
+}
+.state-select-option {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+
+}
+.city-dropdown-cont {
+    position: absolute;
+    left: 59px;
+    top: 420px;
+
+}
+.city-label {
+
+}
+.city-select-option {
+    position: absolute;
+    left: 103px;
+    padding: 12px 75px;
+    border: none;
+    border-radius: 10px;
+
+}
+.gender-radio-btn-cont {
+    position: absolute;
+    left: 59px;
+    top: 491px;
+}
+.gender-label {
+
+}
+.radio-btn-cont {
+    position: absolute;
+    left: 103px;
+    top: 3px;
+    width: 286px;
+
+}
+.dob-cont {
+    position: absolute;
+    left: 59px;
+    top: 550px;
+
+}
+.dob-label {
+
+}
+.date-input {
+    position: absolute;
+    left: 112px;
+    padding: 10px 81px;
+    border: none;
+    border-radius: 10px;
+
+}
+.age-cont {
+    position: absolute;
+    left: 59px;
+    top: 616px;
+
+}
+.age-label {
+
+}
+.age-span {
+    position: absolute;
+    left: 112px;
+    top: -3px;
+    padding: 13px 99px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    color: darkslateblue;
+}
+
+
+
+
+
+.submit-btn {
+    position: absolute;
+    left: 409px;
+    top: 700px;
+    color: magenta;
+}
